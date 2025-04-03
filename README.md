@@ -6,7 +6,7 @@
 
 This tool extends the functionality of [Tricount Downloader](https://github.com/MrNachoX/tricount-downloader) by adding support for retrieving **expense categories**. Additionally, it enables seamless transfer of Tricount data to a local instance of [Firefly III](https://github.com/firefly-iii/firefly-iii) running on an LXC container in Proxmox.
 
-Tricount is a popular expense-sharing app, but it lacks direct integration with personal finance managers like Firefly III. This script bridges the gap by automatically importing Tricount expenses into Firefly III, including category preservation and duplicate prevention.
+Tricount is a popular expense-sharing app, but it lacks direct integration with personal finance managers like Firefly III. This script bridges the gap by automatically importing Tricount expenses into FireFly III, including category preservation and duplicate prevention.
 
 ---
 
@@ -39,7 +39,7 @@ python tricount_to_firefly.py --tricount-key XXXXXXXXXX --firefly-host http://yo
 
 ### 4. Smart Synchronization
 
-The script automatically:
+The script automatically:\
 ✅ Downloads expenses from Tricount with categories\
 ✅ Connects to your Firefly III instance\
 ✅ Checks for previously imported transactions\
@@ -50,10 +50,18 @@ The script automatically:
 
 The script supports the following parameters:
 
-- \`\` - Your Tricount identifier
-- \`\` - Your Firefly III URL
-- \`\` - Your personal access token
-- \`\` - Number of days to check for duplicates (default: 180)
+- \`--tricount-key\` - Your Tricount identifier. Specify your Tricount key (the part after tricount.com/ in the URL)\
+- \`--firefly-host\` - Your Firefly III URL. Specify your Firefly III host URL
+- \`--firefly-token\` - Your personal access token. Provide your Firefly III personal access token
+- \`--days-range\` - Number of days to check for duplicates (default: 180).
+- \`--no-excel\` - Skip exporting to Excel file (useful when you only want to import to Firefly III)
+
+#### Full example with all parameters
+Complete example using all options
+
+```
+python tricount_to_firefly.py --tricount-key XXXXXXXXXX --firefly-host http://192.168.1.100 --firefly-token abcdef123456 --days-range 90 --no-excel
+```
 
 ### 6. Automate with Cron (Optional)
 
@@ -71,7 +79,7 @@ This runs the script every hour and logs the results.
 
 ### Prerequisites
 
-Ensure you have the following installed:
+Ensure you have the following installed:\
 ✅ **Python 3.6+** (download from [python.org](https://www.python.org/))\
 ✅ **A Firefly III instance** (running locally or on a server)
 
