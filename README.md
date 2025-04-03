@@ -48,20 +48,13 @@ The script automatically:\
 
 ### 5. Configuration Options
 
-The script supports the following parameters:
+The script supports the following parameters into python file:
 
-- \`--tricount-key\` - Your Tricount identifier. Specify your Tricount key (the part after tricount.com/ in the URL)\
-- \`--firefly-host\` - Your Firefly III URL. Specify your Firefly III host URL
-- \`--firefly-token\` - Your personal access token. Provide your Firefly III personal access token
-- \`--days-range\` - Number of days to check for duplicates (default: 180).
-- \`--no-excel\` - Skip exporting to Excel file (useful when you only want to import to Firefly III)
-
-#### Full example with all parameters
-Complete example using all options
-
-```
-python tricount_to_firefly.py --tricount-key XXXXXXXXXX --firefly-host http://192.168.1.100 --firefly-token abcdef123456 --days-range 90 --no-excel
-```
+- \`DEFAULT_TRICOUNT_KEY\` - Your Tricount identifier.
+- \`DEFAULT_FIREFLY_HOST\` - Your Firefly III URL.
+- \`DEFAULT_FIREFLY_TOKEN\` - Your personal access token.
+- \`DEFAULT_ACCOUNT_ID\` - Your account ID on FireFly (use "none" to automatically recover the first available account)
+- \`DEFAULT_DAYS_RANGE\` - Number of days to check for duplicates (default: 180).
 
 ### 6. Automate with Cron (Optional)
 
