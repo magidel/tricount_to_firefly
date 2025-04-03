@@ -39,7 +39,8 @@ python tricount_to_firefly.py --tricount-key XXXXXXXXXX --firefly-host http://yo
 
 ### 4. Smart Synchronization
 
-The script automatically: ✅ Downloads expenses from Tricount with categories\
+The script automatically:
+✅ Downloads expenses from Tricount with categories\
 ✅ Connects to your Firefly III instance\
 ✅ Checks for previously imported transactions\
 ✅ Only imports new transactions\
@@ -70,7 +71,8 @@ This runs the script every hour and logs the results.
 
 ### Prerequisites
 
-Ensure you have the following installed: ✅ **Python 3.6+** (download from [python.org](https://www.python.org/))\
+Ensure you have the following installed:
+✅ **Python 3.6+** (download from [python.org](https://www.python.org/))\
 ✅ **A Firefly III instance** (running locally or on a server)
 
 ### Installation Steps
