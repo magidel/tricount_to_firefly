@@ -133,6 +133,22 @@ The script supports additional options for customization:
 python tricount_to_firefly.py --tricount-key XXXXXXXXXX --firefly-host http://192.168.1.100 --firefly-token abcdef123456 --days-range 90 --no-excel
 ```
 
+### Cron use
+
+You can use the command
+
+```
+crontab -e
+```
+
+to automate export from Tricount and import to FireFly of new data.\
+Here is an example of automation from 10.00 to 22.00 every 2 hours
+
+```
+0 10-22/2 * * * /bin/bash -c "cd /home/magidel/tricount-firefly/ && source /home/magidel/tricount-firefly/venv/bin/activate && python3 /home/magidel/tricount-firefly/tricount-to-firefly-grok.py --no-excel >> /home/magidel/tricount>
+```
+
+
 ---
 
 ## License
