@@ -145,7 +145,7 @@ to automate export from Tricount and import to FireFly of new data.\
 Here is an example of automation from 10.00 to 22.00 every 2 hours
 
 ```
-0 10-22/2 * * * /bin/bash -c "cd /home/magidel/tricount-firefly/ && source /home/magidel/tricount-firefly/venv/bin/activate && python3 /home/magidel/tricount-firefly/tricount-to-firefly-grok.py --no-excel >> /home/magidel/tricount>
+0 10-22/2 * * * /bin/bash -c "cd /home/user/tricount-firefly/ && source /home/user/tricount-firefly/venv/bin/activate && python3 /home/user/tricount-firefly/tricount-to-firefly-grok.py --no-excel >> /home/user/tricount-firefly/logfile.log 2>&1
 ```
 
 
